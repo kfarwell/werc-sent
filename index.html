@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+		* {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+		}
+		body,html {
+			width: 100%;
+			height: 100%;
+		}
+		#slide {
+			font-family: sans-serif;
+			white-space: nowrap;
+			color: #000;
+			background: #fff;
+			position: absolute;
+			overflow: hidden;
+		}
+		#usage {
+			margin: 1em;
+		}
+		#usage * {
+			margin-top: 1em;
+		}
+		input {
+			font-size: 200%;
+		}
+		</style>
+		<script src="wsent.js"></script>
+	</head>
+	<body>
+		<input id="file" type="file">
+		<div id="usage">
+			<h1>Usage</h1>
+			<p>Use images by prepending a <code>@</code> before the filename. Lines starting with <code>#</code>
+			will be ignored. A presentation file could look like this:</p>
+
+			<pre><code>wsent
+takahashi
+why?
+@http://example.com/image.png
+easy to use
+no dependencies
+~100 lines of code
+how?
+browse to FILENAME
+one slide per line
+# This is a comment and will not be part of the presentation
+# The next line starts with a whitespace, it will not produce an image slide
+ @http://example.com/image.png
+thanks / questions?</code></pre>
+
+			<p>Move between slides with [back]space.</p>
+		</div>
+		<p id="slide"></p>
+	</body>
+</html>
